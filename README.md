@@ -1,9 +1,33 @@
 # Terraform script to create a VPC and Autoscaling Infrastructure
 
 
+
+
+
 ```
-WARNING: 
+In Details this script will create :
+
+## First we need to create the VPC where our App will work.
+
+- VPC
+- 4 Subnets in 2 AZs
+	2 publics subnets
+	2 privates subnets
+- Route tables for Nat Gateway and Internet Gateway
+- Nat Gateways
+- Internet Gateway
+- Security Groups
+
+## After that we can create a auto scaling Infra
+
+- Application Load Balance
+- Launch configuration
+- Auto scaling Group
+- Target Group
+
 ```
+
+
 
 ## Usange
 Examplo of the use: creating an aws account as member of the a AWS Organizations
