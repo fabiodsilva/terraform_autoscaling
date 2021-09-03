@@ -1,5 +1,13 @@
 # Local .terraform directories
+<<<<<<< HEAD
 **/.terraform/*
+=======
+**/*.terraform/*
+./app/.terraform*
+./vpc/.terraform*
+
+
+>>>>>>> 3ad4ab1 (second commit)
 
 # .tfstate files
 *.tfstate
