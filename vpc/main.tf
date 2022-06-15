@@ -1,14 +1,36 @@
 provider "aws" {
   region = var.region
-  profile = "lab"
+#  access_key = var.AWS_SECRET_ACCESS_KEY
+#  secret_key = var.AWS_ACCESS_KEY_ID
+#  profile = "lab"
 }
 
+
+
+
+
+
 terraform {
-backend "s3" {
-      profile   = "lab"
-      bucket    = "meu-curso-aws-terraform-remote-state-dev"
-      key       = "vpc/vpc.tfstate"
-      region    = "us-east-1"
+  cloud {
+    organization = "CompassUOL"
+    hostname = "app.terraform.io" # Optional; defaults to app.terraform.io
+
+    workspaces {
+      tags = ["terraform_autoscaling"]
+    }
   }
 }
+
+
+
+
+
+#terraform {
+#backend "s3" {
+#      profile   = "lab"
+#      bucket    = "meu-curso-aws-terraform-remote-state-dev"
+#      key       = "vpc/vpc.tfstate"
+#      region    = "us-east-1"
+#  }
+#}
 
